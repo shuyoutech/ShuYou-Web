@@ -2,28 +2,26 @@
 const route = useRoute()
 
 const items = computed(() => [{
-  label: 'Docs',
+  label: '首页',
   to: '/docs',
   active: route.path.startsWith('/docs')
 }, {
-  label: 'Pricing',
+  label: '产品服务',
   to: '/pricing'
 }, {
-  label: 'Blog',
+  label: '技术创新',
   to: '/blog'
 }, {
-  label: 'Changelog',
+  label: '关于我们',
   to: '/changelog'
 }])
 </script>
 
 <template>
   <UHeader>
-    <template #left>
-      <NuxtLink to="/" class="flex items-center gap-3">
-        <AppLogo class="w-auto h-8 shrink-0" />
-        <span class="text-xl font-bold text-gray-900 dark:text-white leading-none">数游科技</span>
-      </NuxtLink>
+    <template #title>
+      <UIcon name="i-custom-logo"/>
+      <span class="text-xl font-bold text-gray-900 dark:text-white leading-none pb-1">数游科技</span>
     </template>
 
     <UNavigationMenu
@@ -32,56 +30,7 @@ const items = computed(() => [{
     />
 
     <template #right>
-      <UColorModeButton />
-
-      <UButton
-        icon="i-lucide-log-in"
-        color="neutral"
-        variant="ghost"
-        to="/login"
-        class="lg:hidden"
-      />
-
-      <UButton
-        label="Sign in"
-        color="neutral"
-        variant="outline"
-        to="/login"
-        class="hidden lg:inline-flex"
-      />
-
-      <UButton
-        label="Sign up"
-        color="neutral"
-        trailing-icon="i-lucide-arrow-right"
-        class="hidden lg:inline-flex"
-        to="/signup"
-      />
-    </template>
-
-    <template #body>
-      <UNavigationMenu
-        :items="items"
-        orientation="vertical"
-        class="-mx-2.5"
-      />
-
-      <USeparator class="my-6" />
-
-      <UButton
-        label="Sign in"
-        color="neutral"
-        variant="subtle"
-        to="/login"
-        block
-        class="mb-3"
-      />
-      <UButton
-        label="Sign up"
-        color="neutral"
-        to="/signup"
-        block
-      />
+      <UColorModeButton/>
     </template>
   </UHeader>
 </template>
