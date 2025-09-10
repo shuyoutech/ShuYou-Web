@@ -142,5 +142,20 @@ export const collections = {
       date: z.date(),
       image: z.string()
     })
+  }),
+  about: defineCollection({
+    source: 'about.yml',
+    type: 'page',
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      content: z.string().optional(),
+      images: z.array(
+        z.object({
+          src: z.string().nonempty(),
+          alt: z.string().optional()
+        })
+      ).optional()
+    })
   })
 }
