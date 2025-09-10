@@ -11,7 +11,13 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     'nuxt-og-image',
+    'shadcn-nuxt'
   ],
+
+  shadcn: {
+    prefix: '',
+    componentDir: './components/ui'
+  },
 
   css: ['~/assets/css/main.css'],
   icon: {
