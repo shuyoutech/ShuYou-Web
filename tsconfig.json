@@ -14,48 +14,5 @@
     {
       "path": "./.nuxt/tsconfig.node.json"
     }
-  ],
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ],
-      "~~/*": [
-        "./*"
-      ],
-      "@@/*": [
-        "./*"
-      ],
-      "assets/*": [
-        "./assets/*"
-      ],
-      "public/*": [
-        "./public/*"
-      ]
-    },
-    "types": [
-      "@nuxt/types",
-      "@nuxtjs/tailwindcss",
-      "vue"
-    ]
-  },
-  "include": [
-    "./components/**/*",
-    "./layouts/**/*",
-    "./pages/**/*",
-    "./plugins/**/*",
-    "./utils/**/*",
-    "./types/**/*",
-    "./app.vue",
-    "./error.vue"
-  ],
-  "exclude": [
-    "node_modules",
-    ".nuxt",
-    "dist"
   ]
 }

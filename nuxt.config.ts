@@ -11,18 +11,9 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     'nuxt-og-image',
-    'shadcn-nuxt',
-    '@nuxtjs/tailwindcss',
   ],
 
-  postcss: {
-    plugins: {
-      '@tailwindcss/postcss': {},
-      autoprefixer: {},
-    },
-  },
-
-  css: ['~/assets/css/main.css', '~/assets/css/tailwind.css'],
+  css: ['~/assets/css/main.css'],
   icon: {
     customCollections: [{
       prefix: 'custom',
@@ -36,26 +27,12 @@ export default defineNuxtConfig({
 
   app: {},
 
-  alias: {
-    '~': './',
-    '@': './',
-    '~~': './',
-    '@@': './',
-    'assets': './assets',
-    'public': './public'
-  },
-
   imports: {
     autoImport: true
   },
 
   routeRules: {
     '/docs': {redirect: '/docs/getting-started', prerender: false}
-  },
-
-  shadcn: {
-    prefix: '',
-    componentDir: './components/ui'
   },
 
   nitro: {
