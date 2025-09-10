@@ -26,35 +26,6 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-//异步数据获取
-const {data: navigation} = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
-  transform: data => data.find(item => item.path === '/docs')?.children || []
-})
-const {data: files} = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
-  server: false
-})
-
-//导航链接
-const links = [{
-  label: 'Docs',
-  icon: 'i-lucide-book',
-  to: '/docs/getting-started'
-}, {
-  label: 'Pricing',
-  icon: 'i-lucide-credit-card',
-  to: '/pricing'
-}, {
-  label: 'Blog',
-  icon: 'i-lucide-pencil',
-  to: '/blog'
-}, {
-  label: 'Changelog',
-  icon: 'i-lucide-history',
-  to: '/changelog'
-}]
-
-// Vue 的依赖注入函数，用于向子孙组件提供数据（这里提供导航数据，以便在整个应用中使用）
-provide('navigation', navigation)
 </script>
 
 <template>
@@ -64,13 +35,6 @@ provide('navigation', navigation)
       <NuxtPage/>
     </NuxtLayout>
     <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        shortcut="meta_k"
-        :navigation="navigation"
-        :links="links"
-        :fuse="{ resultLimit: 42 }"
-      />
       <FluidCursor />
     </ClientOnly>
   </UApp>
