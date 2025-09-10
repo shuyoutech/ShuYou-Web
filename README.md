@@ -2,6 +2,7 @@
 https://icones.js.org/
 
 # 技术栈
+https://nuxt.com/docs/4.x/api/nuxt-config
 https://inspira-ui.com/docs/zh-cn/components/cursors/fluid-cursor
 https://shadcn-vue.com/docs/installation/nuxt
 https://iconify.design/docs/icon-components/vue/

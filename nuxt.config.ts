@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: {enabled: true},
+  devtools: {enabled: false},
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ]
+  },
 
   modules: [
     '@nuxt/content',
@@ -11,7 +18,8 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     'nuxt-og-image',
-    'shadcn-nuxt'
+    'shadcn-nuxt',
+    '@nuxtjs/tailwindcss',
   ],
 
   shadcn: {
@@ -25,6 +33,15 @@ export default defineNuxtConfig({
       prefix: 'custom',
       dir: './app/assets/icons'
     }]
+  },
+
+  typescript: {
+    typeCheck: false,
+    tsConfig: {
+      compilerOptions: {
+        baseUrl: '.',
+      }
+    }
   },
 
   ui: {
