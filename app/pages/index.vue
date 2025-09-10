@@ -5,7 +5,7 @@ import {SparklesText} from "~~/components/ui/sparkles-text";
 </script>
 
 <template>
-  <div class="mx-auto h-[30rem] w-[calc(100%-4rem)] overflow-hidden rounded-md">
+  <div class="mx-auto h-[30rem] w-full overflow-hidden">
     <Vortex
       background-color="black"
       class="flex size-full flex-col items-center justify-center px-2 py-4 md:px-10"
@@ -22,8 +22,6 @@ import {SparklesText} from "~~/components/ui/sparkles-text";
       </p>
     </Vortex>
   </div>
-
-
   <USeparator />
 
 
