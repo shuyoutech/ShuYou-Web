@@ -1,47 +1,48 @@
 <script setup lang="ts">
 
-const items = computed(() => [
+import type {NavigationMenuItem} from '@nuxt/ui'
+
+const items = ref<NavigationMenuItem[]>([
   {
     label: '首页',
     to: '/'
   },
   {
     label: '产品服务',
-    active: true,
     children: [
       {
-        label: 'Admin系统',
-        icon: 'i-simple-icons-github',
+        label: 'Admin管理',
+        icon: 'i-lucide-shield-check',
         to: 'https://admin.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'AI系统',
-        icon: 'i-simple-icons-github',
+        label: 'AI智能',
+        icon: 'i-lucide-message-circle',
         to: 'https://ai.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'BBS系统',
-        icon: 'i-simple-icons-github',
+        label: 'BBS论坛',
+        icon: 'i-lucide-message-square',
         to: 'https://bbs.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'Nav系统',
-        icon: 'i-simple-icons-github',
+        label: 'Nav导航',
+        icon: 'i-lucide-compass',
         to: 'https://nav.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'DKP系统',
-        icon: 'i-simple-icons-github',
+        label: 'DKP积分',
+        icon: 'i-lucide-trophy',
         to: 'https://dkp.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'GAME系统',
-        icon: 'i-simple-icons-github',
+        label: 'Game游戏',
+        icon: 'i-lucide-gamepad-2',
         to: 'https://game.shuyoutech.com',
         target: '_blank'
       }
@@ -50,7 +51,8 @@ const items = computed(() => [
   {
     label: '关于我们',
     to: '/about'
-  }])
+  }
+])
 </script>
 
 <template>
@@ -73,3 +75,7 @@ const items = computed(() => [
     </template>
   </UHeader>
 </template>
+
+<style scoped>
+
+</style>
