@@ -6,17 +6,17 @@ const sizeEnum = z.enum(['xs', 'sm', 'md', 'lg', 'xl'])
 const orientationEnum = z.enum(['vertical', 'horizontal'])
 
 const createBaseSchema = () => z.object({
-  title: z.string().nonempty(),
-  description: z.string().nonempty()
+  title: z.string().min(1),
+  description: z.string().min(1)
 })
 
 const createFeatureItemSchema = () => createBaseSchema().extend({
-  icon: z.string().nonempty().editor({ input: 'icon' })
+  icon: z.string().min(1).editor({ input: 'icon' })
 })
 
 const createLinkSchema = () => z.object({
-  label: z.string().nonempty(),
-  to: z.string().nonempty(),
+  label: z.string().min(1),
+  to: z.string().min(1),
   icon: z.string().optional().editor({ input: 'icon' }),
   size: sizeEnum.optional(),
   trailing: z.boolean().optional(),
@@ -26,7 +26,7 @@ const createLinkSchema = () => z.object({
 })
 
 const createImageSchema = () => z.object({
-  src: z.string().nonempty().editor({ input: 'media' }),
+  src: z.string().min(1).editor({ input: 'media' }),
   alt: z.string().optional(),
   loading: z.string().optional(),
   srcset: z.string().optional()
@@ -42,7 +42,7 @@ export const collections = {
       })),
       sections: z.array(
         createBaseSchema().extend({
-          id: z.string().nonempty(),
+          id: z.string().min(1),
           orientation: orientationEnum.optional(),
           reverse: z.boolean().optional(),
           features: z.array(createFeatureItemSchema())
@@ -55,12 +55,12 @@ export const collections = {
         headline: z.string().optional(),
         items: z.array(
           z.object({
-            quote: z.string().nonempty(),
+            quote: z.string().min(1),
             user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
+              name: z.string().min(1),
+              description: z.string().min(1),
+              to: z.string().min(1),
+              target: z.string().min(1),
               avatar: createImageSchema()
             })
           })
@@ -81,28 +81,28 @@ export const collections = {
     schema: z.object({
       plans: z.array(
         z.object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
+          title: z.string().min(1),
+          description: z.string().min(1),
           price: z.object({
-            month: z.string().nonempty(),
-            year: z.string().nonempty()
+            month: z.string().min(1),
+            year: z.string().min(1)
           }),
-          billing_period: z.string().nonempty(),
-          billing_cycle: z.string().nonempty(),
+          billing_period: z.string().min(1),
+          billing_cycle: z.string().min(1),
           button: createLinkSchema(),
-          features: z.array(z.string().nonempty()),
+          features: z.array(z.string().min(1)),
           highlight: z.boolean().optional()
         })
       ),
       logos: z.object({
-        title: z.string().nonempty(),
+        title: z.string().min(1),
         icons: z.array(z.string())
       }),
       faq: createBaseSchema().extend({
         items: z.array(
           z.object({
-            label: z.string().nonempty(),
-            content: z.string().nonempty(),
+            label: z.string().min(1),
+            content: z.string().min(1),
             defaultOpen: z.boolean().optional()
           })
         )
@@ -117,16 +117,16 @@ export const collections = {
     source: '3.blog/**/*',
     type: 'page',
     schema: z.object({
-      image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+      image: z.object({ src: z.string().min(1).editor({ input: 'media' }) }),
       authors: z.array(
         z.object({
-          name: z.string().nonempty(),
-          to: z.string().nonempty(),
-          avatar: z.object({ src: z.string().nonempty().editor({ input: 'media' }) })
+          name: z.string().min(1),
+          to: z.string().min(1),
+          avatar: z.object({ src: z.string().min(1).editor({ input: 'media' }) })
         })
       ),
       date: z.date(),
-      badge: z.object({ label: z.string().nonempty() })
+      badge: z.object({ label: z.string().min(1) })
     })
   }),
   changelog: defineCollection({
@@ -137,7 +137,7 @@ export const collections = {
     source: '4.changelog/**/*',
     type: 'page',
     schema: z.object({
-      title: z.string().nonempty(),
+      title: z.string().min(1),
       description: z.string(),
       date: z.date(),
       image: z.string()
@@ -147,12 +147,12 @@ export const collections = {
     source: 'about.yml',
     type: 'page',
     schema: z.object({
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
+      title: z.string().min(1),
+      description: z.string().min(1),
       content: z.string().optional(),
       images: z.array(
         z.object({
-          src: z.string().nonempty(),
+          src: z.string().min(1),
           alt: z.string().optional()
         })
       ).optional()
