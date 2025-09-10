@@ -71,6 +71,7 @@ provide('navigation', navigation)
         :links="links"
         :fuse="{ resultLimit: 42 }"
       />
+      <FluidCursor />
     </ClientOnly>
   </UApp>
 </template>
