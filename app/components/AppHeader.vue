@@ -20,8 +20,10 @@ const items = computed(() => [{
 <template>
   <UHeader>
     <template #title>
-      <UIcon name="i-custom-logo"/>
-      <span class="text-xl font-bold text-gray-900 dark:text-white leading-none pb-1">数游科技</span>
+      <div class="flex items-center gap-2">
+        <UIcon name="i-custom-logo" class="w-8 h-8"/>
+        <span class="text-xl font-bold text-gray-900 dark:text-white leading-none">数游科技</span>
+      </div>
     </template>
 
     <UNavigationMenu
