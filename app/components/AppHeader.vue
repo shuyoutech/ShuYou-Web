@@ -1,13 +1,49 @@
 <script setup lang="ts">
-const route = useRoute()
 
 const items = computed(() => [{
   label: '首页',
-  to: '/docs',
-  active: route.path.startsWith('/docs')
+  to: '/'
 }, {
   label: '产品服务',
-  to: '/pricing'
+  active: true,
+  children:[
+    {
+      label: 'Admin系统',
+      icon: 'i-simple-icons-github',
+      to: 'https://admin.shuyoutech.com',
+      target: '_blank'
+    },
+    {
+      label: 'AI系统',
+      icon: 'i-simple-icons-github',
+      to: 'https://ai.shuyoutech.com',
+      target: '_blank'
+    },
+    {
+      label: 'BBS系统',
+      icon: 'i-simple-icons-github',
+      to: 'https://bbs.shuyoutech.com',
+      target: '_blank'
+    },
+    {
+      label: 'Nav系统',
+      icon: 'i-simple-icons-github',
+      to: 'https://nav.shuyoutech.com',
+      target: '_blank'
+    },
+    {
+      label: 'DKP系统',
+      icon: 'i-simple-icons-github',
+      to: 'https://dkp.shuyoutech.com',
+      target: '_blank'
+    },
+    {
+      label: 'GAME系统',
+      icon: 'i-simple-icons-github',
+      to: 'https://game.shuyoutech.com',
+      target: '_blank'
+    }
+  ]
 }, {
   label: '技术创新',
   to: '/blog'
@@ -28,7 +64,7 @@ const items = computed(() => [{
 
     <UNavigationMenu
       :items="items"
-      variant="link"
+      class="w-full justify-center"
     />
 
     <template #right>

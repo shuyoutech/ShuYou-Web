@@ -16,10 +16,28 @@ const features = ref([
     to: 'https://bbs.shuyoutech.com'
   },
   {
-    title: 'Nav',
-    description: '数游Nav专为用户收录并分类整理了互联网上所有热门、实用、优质的网站资源。无论您需要访问综合门户、官方平台、工具网站还是特色资源，这里都能为您提供最快捷、最全面的入口服务。',
+    title: 'NAV',
+    description: '数游NAV专为用户收录并分类整理了互联网上所有热门、实用、优质的网站资源。无论您需要访问综合门户、官方平台、工具网站还是特色资源，这里都能为您提供最快捷、最全面的入口服务。',
     icon: 'i-lucide-compass',
     to: 'https://nav.shuyoutech.com'
+  },
+  {
+    title: 'ADMIN',
+    description: '数游ADMIN通用后台权限管理系统致力于为企业和组织提供全面、安全、高效的访问控制解决方案。通过精细化的权限管理、完善的系统配置和实时操作监控，确保系统资源得到合理分配与使用，有效防范数据泄露风险，提升整体运维管理效率。',
+    icon: 'i-lucide-shield-check',
+    to: 'https://admin.shuyoutech.com'
+  },
+  {
+    title: 'DKP',
+    description: '数游DKP管理系统——专为游戏公会、团队组织打造的智能积分统计与奖励平台。我们通过精准的活动参与记录、公平的积分分配机制和丰富的奖励兑换体系，帮助管理者高效运营团队，激励成员积极参与活动，营造更加活跃和谐的社群氛围。',
+    icon: 'i-lucide-trophy',
+    to: 'https://dkp.shuyoutech.com'
+  },
+  {
+    title: 'GAME',
+    description: '数游GAME专为深度玩家打造的一站式游戏生态平台。这里不仅汇聚了全网热门游戏资讯，更创新地整合了多平台交易比价功能和工会社交体系，为您提供从游戏发现、资产交易到社群归属的全流程服务。',
+    icon: 'i-lucide-gamepad-2',
+    to: 'https://game.shuyoutech.com'
   }
 ])
 
