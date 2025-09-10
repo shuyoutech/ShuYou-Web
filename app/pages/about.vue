@@ -4,18 +4,6 @@ import {GlowBorder} from "~~/components/ui/glow-border";
 
 const {data: page} = await useAsyncData('about', () => queryCollection('about').first())
 
-// 调试信息
-console.log('About page data:', page.value)
-
-if (!page.value) {
-  console.error('About page not found')
-  throw createError({
-    statusCode: 404,
-    statusMessage: 'Page not found',
-    fatal: true
-  })
-}
-
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
   ogTitle: page.value?.seo?.title || page.value?.title,
@@ -33,9 +21,9 @@ useSeoMeta({
     >
     </UPageHero>
 
-    <UPageSection :ui="{ container: '!px-0' }">
+    <UPageSection :ui="{ container: '!px-0 !pt-0' }">
       <!-- 核心内容区域 -->
-      <div class="relative w-full overflow-hidden rounded-none mb-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 px-4 py-8">
+      <div class="relative w-full overflow-hidden rounded-none mb-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 px-4 py-6 -mt-8">
         <GlowBorder
           :color="['#A07CFE', '#FE8FB5', '#FFBE7B']"
           :border-radius="0"
