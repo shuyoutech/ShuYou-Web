@@ -6,19 +6,19 @@ const features = ref([
   {
     title: 'AI',
     description: '数游AI创意平台集成了最前沿的人工智能生成技术，为您提供全方位的智能内容创作服务。无论是智能对话、AI绘画还是视频生成，我们都能通过先进的算法模型，将您的想法瞬间转化为高质量的数字内容。',
-    icon: 'i-lucide-smile',
+    icon: 'i-lucide-message-circle',
     to: 'https://ai.shuyoutech.com'
   },
   {
     title: 'BBS',
     description: '数游BBS专为游戏爱好者打造的综合性论坛社区。我们专注于游戏角色造型设计、外观分享、攻略交流与官方资讯，为每一位玩家提供展示个性、学习技巧、交流心得的完美平台。',
-    icon: 'i-lucide-a-large-small',
+    icon: 'i-lucide-message-square',
     to: 'https://bbs.shuyoutech.com'
   },
   {
     title: 'Nav',
     description: '数游Nav专为用户收录并分类整理了互联网上所有热门、实用、优质的网站资源。无论您需要访问综合门户、官方平台、工具网站还是特色资源，这里都能为您提供最快捷、最全面的入口服务。',
-    icon: 'i-lucide-sun-moon',
+    icon: 'i-lucide-compass',
     to: 'https://nav.shuyoutech.com'
   }
 ])
