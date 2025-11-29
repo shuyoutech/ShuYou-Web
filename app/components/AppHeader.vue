@@ -18,13 +18,13 @@ const items = ref<NavigationMenuItem[]>([
       },
       {
         label: 'API',
-        icon: 'i-lucide-gamepad-2',
+        icon: 'i-lucide-code',
         to: 'https://doc.shuyoutech.com',
         target: '_blank'
       },
       {
         label: 'Nav',
-        icon: 'i-lucide-compass',
+        icon: 'i-lucide-navigation',
         to: 'https://nav.shuyoutech.com',
         target: '_blank'
       },
