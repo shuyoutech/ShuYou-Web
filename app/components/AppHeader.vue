@@ -11,39 +11,39 @@ const items = ref<NavigationMenuItem[]>([
     label: '产品服务',
     children: [
       {
+        label: '数游AI',
+        icon: 'i-lucide-message-circle',
+        to: 'https://ai.shuyoutech.com',
+        target: '_blank'
+      },
+      {
+        label: '数游API',
+        icon: 'i-lucide-gamepad-2',
+        to: 'https://doc.shuyoutech.com',
+        target: '_blank'
+      },
+      {
+        label: '数游导航',
+        icon: 'i-lucide-compass',
+        to: 'https://nav.shuyoutech.com',
+        target: '_blank'
+      },
+      {
         label: 'Admin管理',
         icon: 'i-lucide-shield-check',
         to: 'https://admin.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'AI智能',
-        icon: 'i-lucide-message-circle',
-        to: 'https://ai.shuyoutech.com',
-        target: '_blank'
-      },
-      {
-        label: 'BBS论坛',
+        label: '数游BBS',
         icon: 'i-lucide-message-square',
         to: 'https://bbs.shuyoutech.com',
         target: '_blank'
       },
       {
-        label: 'Nav导航',
-        icon: 'i-lucide-compass',
-        to: 'https://nav.shuyoutech.com',
-        target: '_blank'
-      },
-      {
-        label: 'DKP积分',
+        label: '数游DKP',
         icon: 'i-lucide-trophy',
         to: 'https://dkp.shuyoutech.com',
-        target: '_blank'
-      },
-      {
-        label: 'Game游戏',
-        icon: 'i-lucide-gamepad-2',
-        to: 'https://game.shuyoutech.com',
         target: '_blank'
       }
     ]

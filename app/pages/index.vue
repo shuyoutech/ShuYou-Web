@@ -5,21 +5,27 @@ import {SparklesText} from "~~/components/ui/sparkles-text";
 const features = ref([
   {
     title: 'AI',
-    description: '数游AI创意平台集成了最前沿的人工智能生成技术，为您提供全方位的智能内容创作服务。无论是智能对话、AI绘画还是视频生成，我们都能通过先进的算法模型，将您的想法瞬间转化为高质量的数字内容。',
+    description: '数游AI平台为您聚合了包括OpenAI、Google、Anthropic、Grok、DeepSeek、通义千问在内的众多前沿大模型。这意味着您无需在不同平台间徘徊，即可在一个地方满足所有复杂多变的创作需求。无论您面临智能对话、AI绘画还是视频生成的复杂需求，我们都能通过精准的算法调度，将您的灵感瞬间转化为高质量的数字内容，为您提供全方位、持续进化的智能创作服务。',
     icon: 'i-lucide-message-circle',
     to: 'https://ai.shuyoutech.com'
   },
   {
-    title: 'BBS',
-    description: '数游BBS专为游戏爱好者打造的综合性论坛社区。我们专注于游戏角色造型设计、外观分享、攻略交流与官方资讯，为每一位玩家提供展示个性、学习技巧、交流心得的完美平台。',
-    icon: 'i-lucide-message-square',
-    to: 'https://bbs.shuyoutech.com'
+    title: 'API',
+    description: '数游API，您的一站式AI模型网关。我们已聚合OpenAI、Google、Anthropic等全球顶尖模型，您只需一个统一的API即可轻松调用。将您从繁琐的管理工作中解放出来，把宝贵的开发精力重新投入到真正的创新之上，无需再为繁琐的管理与切换而分心。',
+    icon: 'i-lucide-gamepad-2',
+    to: 'https://doc.shuyoutech.com'
   },
   {
     title: 'NAV',
     description: '数游NAV专为用户收录并分类整理了互联网上所有热门、实用、优质的网站资源。无论您需要访问综合门户、官方平台、工具网站还是特色资源，这里都能为您提供最快捷、最全面的入口服务。',
     icon: 'i-lucide-compass',
     to: 'https://nav.shuyoutech.com'
+  },
+  {
+    title: 'BBS',
+    description: '数游BBS专为游戏爱好者打造的综合性论坛社区。我们专注于游戏角色造型设计、外观分享、攻略交流与官方资讯，为每一位玩家提供展示个性、学习技巧、交流心得的完美平台。',
+    icon: 'i-lucide-message-square',
+    to: 'https://bbs.shuyoutech.com'
   },
   {
     title: 'ADMIN',
@@ -32,12 +38,6 @@ const features = ref([
     description: '数游DKP管理系统——专为游戏公会、团队组织打造的智能积分统计与奖励平台。我们通过精准的活动参与记录、公平的积分分配机制和丰富的奖励兑换体系，帮助管理者高效运营团队，激励成员积极参与活动，营造更加活跃和谐的社群氛围。',
     icon: 'i-lucide-trophy',
     to: 'https://dkp.shuyoutech.com'
-  },
-  {
-    title: 'GAME',
-    description: '数游GAME专为深度玩家打造的一站式游戏生态平台。这里不仅汇聚了全网热门游戏资讯，更创新地整合了多平台交易比价功能和工会社交体系，为您提供从游戏发现、资产交易到社群归属的全流程服务。',
-    icon: 'i-lucide-gamepad-2',
-    to: 'https://game.shuyoutech.com'
   }
 ])
 

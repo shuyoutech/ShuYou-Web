@@ -5,17 +5,17 @@ const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
 
 //用于动态设置页面头部的 HTML 标签（如 <meta>、<link> 等）。
 useHead({
-  title: '首页',
+  title: '数游AI | AI工具聚合平台与API服务',
   meta: [
     {charset: 'utf-8'},
     {name: 'viewport', content: 'width=device-width, initial-scale=1'},
     {
       name: 'description',
-      content: '数游科技 - 打造无缝衔接生活、工作与学习的数字化工具系统。旗下拥有AI创意平台、游戏BBS社区、网址导航、权限管理系统、DKP公会积分工具及一站式游戏平台，致力于以创新工具提升您的效率，释放您的创造力。'
+      content: '数游科技 - 专注于提供领先的AI解决方案，聚合各类AI工具与API服务，并提供专业的AI论文、网址导航、后台管理系统及DKP系统，致力于为游戏行业提供全面的技术与资讯服务。'
     },
     {
       name: 'keywords',
-      content: '数游科技, 数字化工具, 效率软件, AI创作, 游戏社区, 网址导航, 后台管理系统, DKP系统, 游戏资讯, 工作效率, 学习工具'
+      content: '数游科技, 数游AI, AI工具, AI论文, API接口, 网址导航, 后台管理系统, DKP系统'
     },
     {name: 'theme-color', content: color},
   ],
@@ -31,7 +31,7 @@ useHead({
 useSeoMeta({
   titleTemplate: '%s - 数游科技',
   ogTitle: '数游科技',
-  ogDescription: '数游科技 - 打造无缝衔接生活、工作与学习的数字化工具系统。旗下拥有AI创意平台、游戏BBS社区、网址导航、权限管理系统、DKP公会积分工具及一站式游戏平台，致力于以创新工具提升您的效率，释放您的创造力。',
+  ogDescription: '数游科技 - 专注于提供领先的AI解决方案，聚合各类AI工具与API服务，并提供专业的AI论文、网址导航、后台管理系统及DKP系统，致力于为游戏行业提供全面的技术与资讯服务。',
   ogUrl: 'https://www.shuyoutech.com/',
   ogType: 'website',
   ogImage: 'https://www.shuyoutech.com/favicon.ico',
